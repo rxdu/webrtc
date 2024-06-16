@@ -540,6 +540,13 @@ if (!build_with_chromium) {
       ]
     }
 
+    if (rtc_include_builtin_video_codecs) {
+      deps += [
+        "api/video_codecs:builtin_video_decoder_factory",
+        "api/video_codecs:builtin_video_encoder_factory",
+      ]  
+    }
+
     if (build_with_mozilla) {
       deps += [
         "api/video:video_frame",
